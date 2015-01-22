@@ -1,0 +1,32 @@
+<div id="post_content">
+
+<h1 class="title">
+  <%= @post.title %>
+</h1>
+
+<p class="body">
+  <%= simple_format @post.content %>
+</p>
+
+<p class="body">
+  <b>Tags:</b>
+  <%= join_tags(@post) %>
+</p>
+
+<p>Posted by: <%= post_user_name(@post) %></p>
+
+<br />
+
+<% if is_current_user_post(@post) %>
+  <%= link_to 'Edit Post', edit_post_path(@post), class: "button" %>
+<% end %>
+
+<div id="comments">
+  <h2><%= @post.comments.count %> Comments</h2>
+  <%= render @post.comments %>
+
+  <h3>Add a comment:</h3>
+  <%= render "comments/form" %>
+</div>
+
+</div>

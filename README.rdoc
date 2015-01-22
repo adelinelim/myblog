@@ -1,0 +1,16 @@
+Basic Blog Engine built in Ruby on Rails
+
+Core requirements:
+- Posts that contain a title and content
+- Posts can have any number of Comments
+- Comments each have a name and some content
+- Posts can have any number of Tags
+- Tags are essentially category names
+- Clicking on a Tag on the blog should bring the user to a list of Posts containing that Tag
+- Simple interface that allows creating/editing/deleting Posts, creating Comments, adding Tags to Posts
+- Deployed and hosted on Heroku
+
+Out of scope requirements:
+- Pagination
+- User authorization/authentication
+- UI design and styling

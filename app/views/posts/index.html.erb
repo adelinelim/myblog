@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+  <div class="post_wrapper">
+    <h2 class="title"><%= link_to post.title, post %></h2>
+    <p class="body"><%= truncate post.content %></p>
+    <p><b>Tags: </b><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+    <% if is_current_user_post(post) %>
+      <%= link_to "Edit Post", edit_post_path(post), class: "button" %>
+      <%= link_to 'Destroy', post, class: "button", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+<% end %>
+<div class="post_wrapper">
+  <%= will_paginate @posts %>
+</div>

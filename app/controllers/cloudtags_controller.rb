@@ -1,0 +1,2 @@
+class CloudtagsController < ApplicationController
+end
