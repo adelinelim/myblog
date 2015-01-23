@@ -10,6 +10,8 @@
     <% end %>
   </div>
 <% end %>
-<div class="post_wrapper">
-  <%= will_paginate @posts %>
-</div>
+<% if post_exceeded %>
+  <div class="post_wrapper">
+    <%= will_paginate @posts %>
+  </div>
+<% end %>

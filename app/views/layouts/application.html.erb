@@ -28,7 +28,7 @@
 
     <ul>
       <li class="category">Social</li>
-      <li><a href="https://github.com/adelinelim/blog">Github</a></li>
+      <li><a href="https://github.com/adelinelim/myblog">Github</a></li>
       <li><a href="mailto:adelineyiing@gmail.com">Email</a></li>
     </ul>
 
@@ -58,7 +58,7 @@
     </div>
 
     <% flash.each do |name, msg| %>
-    <%= content_tag(:div, msg, id: "notice") %>
+      <%= content_tag(:div, msg, id: "notice") %>
     <% end %>
 
     <%= yield %>

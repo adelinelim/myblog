@@ -11,4 +11,8 @@ module PostsHelper
     User.find_by_id(post.user_id).email
   end
 
+  def post_exceeded
+    Post.count > Post.per_page
+  end
+
 end
