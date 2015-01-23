@@ -14,3 +14,4 @@ Out of scope requirements:
 - Pagination
 - User authorization/authentication
 - UI design and styling
+- Test suite
