@@ -19,12 +19,9 @@ gem 'will_paginate'
 
 gem 'devise', '~> 3.3.0'
 
-group :development do
+group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
-end
-
-group :test do
   gem 'rspec'
   gem 'spork'
 end
