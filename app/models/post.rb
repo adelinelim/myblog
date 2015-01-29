@@ -10,7 +10,6 @@ class Post < ActiveRecord::Base
   validates :title,   :presence => true,
                       :uniqueness => { :message => "already taken" },
                       :length => { :within => 2..255 }
-                      #:length => { :maximum => 100 }
 
   validates :content, :presence => true
 
